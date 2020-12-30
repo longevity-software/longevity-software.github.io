@@ -10,8 +10,8 @@ const IndexPage = () => (
     <SEO title="Home" />
     <h1>About Me:</h1>
     <p>Name: Graham Long</p>
-    <p></p>
-    <Link to="/page-2/">Risk Evaluation Of Software Changes</Link> <br />
+    <p>About: I am a Software / Firmware engineer with over 15 years experience in the medical device industry.</p>
+    <Link to="/RiskEvaluationOfSoftwareChanges/">Risk Evaluation Of Software Changes</Link> <br />
   </Layout>
 )
 

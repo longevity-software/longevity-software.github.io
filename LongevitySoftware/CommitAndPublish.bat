@@ -1,7 +1,7 @@
 :: This is a comment
 ECHO OFF
 
-SET COMMIT_MESSAGE="%1"
+SET COMMIT_MESSAGE=%1
 
 ECHO %COMMIT_MESSAGE%
 
@@ -16,7 +16,7 @@ GOTO END_OF_FILE
 
 :COMMIT_STEP
 
-git commit -m "%1"
+git commit -m %COMMIT_MESSAGE%
 
 IF %ERRORLEVEL%==0 GOTO PUSH_STEP
 ECHO Failed to Commit changes to git

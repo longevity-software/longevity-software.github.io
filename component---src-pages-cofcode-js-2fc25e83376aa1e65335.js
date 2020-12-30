@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{219:function(e,t,a){"use strict";a.r(t);var n=a(0),c=a.n(n),l=a(56),r=a(215),o=a(214);t.default=function(){return c.a.createElement(r.a,null,c.a.createElement(o.a,{title:"C of Code Home"}),c.a.createElement(l.Link,{to:"/"},"Home"),c.a.createElement("h1",null,"C code related articles"),c.a.createElement("p",null,"Select a category"),c.a.createElement("p",null,c.a.createElement(l.Link,{to:"/coc_datastructures/"},"Data Structures")))}}}]);
-//# sourceMappingURL=component---src-pages-cofcode-js-2fc25e83376aa1e65335.js.map

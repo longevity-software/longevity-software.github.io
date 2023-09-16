@@ -1,0 +1,21 @@
+body {
+    background-color: #eeffee;
+}
+
+.panel > .panel-heading {
+    color: #fff;
+    background-color: #449d44;
+    background-image: none;
+    border-color: #398439;
+
+
+}
+
+.list-group > .list-group-item {
+    background-image: none;
+    background-color: #eeffee;
+}
+
+.heading {
+    color: #004421;
+}

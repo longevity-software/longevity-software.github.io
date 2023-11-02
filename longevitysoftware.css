@@ -19,3 +19,45 @@ body {
 .heading {
     color: #004421;
 }
+
+#connectButton {
+    width: 100vw;
+    height: 10vh;
+    margin: 2px;
+}
+
+#LeftForwardButton {
+    width: 100%;
+    height: 30vh;
+    margin: 2px;
+}
+
+#RightForwardButton {
+    width: 100%;
+    height: 30vh;
+    margin: 2px;
+}
+
+#LeftStopButton {
+    width: 100%;
+    height: 30vh;
+    margin: 2px;
+}
+
+#RightStopButton {
+    width: 100%;
+    height: 30vh;
+    margin: 2px;
+}
+
+#LeftBackwardButton {
+    width: 100%;
+    height: 30vh;
+    margin: 2px;
+}
+
+#RightBackwardButton {
+    width: 100%;
+    height: 30vh;
+    margin: 2px;
+}

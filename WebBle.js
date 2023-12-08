@@ -23,6 +23,8 @@ var rightState = 0;
 async function BLEManager() {
     connectionStatus.textContent = "Connect Button Clicked";
 
+    all_ok = true;
+
     try {
         const device = await navigator.bluetooth.requestDevice({
             filters: [
@@ -32,20 +34,26 @@ async function BLEManager() {
     }
     catch(err) {
         connectionStatus.textContent = "Connection cancelled - " + err.message;
-        return;
+        all_ok = false;
     }
 
-    try {
-        const connectedDevice = await device.gatt.connect();
-        connectionStatus.textContent = "CONNECTED";
-    }
-    catch(err) {
-        connectionStatus.textContent = "CONNECTION FAILED - " + err.message;
-        return;
+    if (all_ok)
+    {
+        try {
+            const connectedDevice = await device.gatt.connect();
+            connectionStatus.textContent = "CONNECTED";
+        }
+        catch(err) {
+            connectionStatus.textContent = "CONNECTION FAILED - " + err.message;
+            all_ok = false;
+        }
     }
 
-    const controlService = await connectedDevice.getPrimaryService(0x3000);
-    const controlCharacteristic = await controlService.getCharacteristic(0x3100);
+    if (all_ok)
+    {
+        const controlService = await connectedDevice.getPrimaryService(0x3000);
+        const controlCharacteristic = await controlService.getCharacteristic(0x3100);
+    }
 }
 
 async function LeftForwardClick() {

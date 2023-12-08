@@ -32,6 +32,7 @@ async function BLEManager() {
     }
     catch(err) {
         connectionStatus.textContent = "Connection cancelled - " + err.message;
+        return;
     }
 
     try {
@@ -40,6 +41,7 @@ async function BLEManager() {
     }
     catch(err) {
         connectionStatus.textContent = "CONNECTION FAILED - " + err.message;
+        return;
     }
 
     const controlService = await connectedDevice.getPrimaryService(0x3000);

@@ -1,63 +1,57 @@
-body {
-    background-color: #eeffee;
-}
-
-.panel > .panel-heading {
-    color: #fff;
-    background-color: #449d44;
-    background-image: none;
-    border-color: #398439;
-
-
-}
-
-.list-group > .list-group-item {
-    background-image: none;
-    background-color: #eeffee;
-}
-
-.heading {
-    color: #004421;
+.div-no-padding {
+    padding: 0px;
+    margin: 0px;
 }
 
 #connectButton {
     width: 100vw;
     height: 10vh;
-    margin: 2px;
 }
 
 #LeftForwardButton {
-    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border: 0 none;
+    width: 45vw;
     height: 30vh;
-    margin: 2px;
 }
 
 #RightForwardButton {
-    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border: 0 none;
+    width: 45vw;
     height: 30vh;
-    margin: 2px;
 }
 
 #LeftStopButton {
-    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border: 0 none;
+    width: 45vw;
     height: 30vh;
-    margin: 2px;
 }
 
 #RightStopButton {
-    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border: 0 none;
+    width: 45vw;
     height: 30vh;
-    margin: 2px;
 }
 
 #LeftBackwardButton {
-    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border: 0 none;
+    width: 45vw;
     height: 30vh;
-    margin: 2px;
 }
 
 #RightBackwardButton {
-    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border: 0 none;
+    width: 45vw;
     height: 30vh;
-    margin: 2px;
 }

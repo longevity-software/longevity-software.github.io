@@ -1,6 +1,7 @@
 
 // Get reference to the buttons
 const connectButton = document.getElementById("connectButton");
+const connectionStatus = document.getElementById("connectionStatus");
 const leftForwardButton = document.getElementById("LeftForwardButton");
 const rightForwardButton = document.getElementById("RightForwardButton");
 const leftStopButton = document.getElementById("LeftStopButton");
@@ -20,7 +21,7 @@ var leftState = 0;
 var rightState = 0;
 
 async function BLEManager() {
-    console.log("Connect Button Clicked");
+    connectionStatus.textContent = "Connect Button Clicked";
 
     try {
         const device = await navigator.bluetooth.requestDevice({
@@ -29,15 +30,15 @@ async function BLEManager() {
             ]
         });
     }
-    catch {
-        console.log("Connection cancelled");
+    catch(err) {
+        connectionStatus.textContent = "Connection cancelled - " + err.message;
     }
 
     try {
         const connectedDevice = await device.gatt.connect();
     }
-    catch {
-        console.log("CONNECTION FAILED");
+    catch(err) {
+        connectionStatus.textContent = "CONNECTION FAILED - " + err.message;
     }
 
     const controlService = await connectedDevice.getPrimaryService(0x3000);
@@ -45,9 +46,9 @@ async function BLEManager() {
 }
 
 async function LeftForwardClick() {
-    console.log("LeftForwardClick");
+    connectionStatus.textContent = "LeftForwardClick";
     if (typeof controlCharacteristic === 'undefined') {
-        console.log("Control Characteristic not defined.");
+        connectionStatus.textContent = "Control Characteristic not defined.";
         return;
     }
 
@@ -61,9 +62,9 @@ async function LeftForwardClick() {
 }
 
 async function RightForwardClick() {
-    console.log("RightForwardClick");
+    connectionStatus.textContent = "RightForwardClick";
     if (typeof controlCharacteristic === 'undefined') {
-        console.log("Control Characteristic not defined.");
+        connectionStatus.textContent = "Control Characteristic not defined.";
         return;
     }
 
@@ -77,9 +78,9 @@ async function RightForwardClick() {
 }
 
 async function LeftStopClick() {
-    console.log("LeftStopClick");
+    connectionStatus.textContent = "LeftStopClick";
     if (typeof controlCharacteristic === 'undefined') {
-        console.log("Control Characteristic not defined.");
+        connectionStatus.textContent = "Control Characteristic not defined.";
         return;
     }
 
@@ -93,9 +94,9 @@ async function LeftStopClick() {
 }
 
 async function RightStopClick() {
-    console.log("RightStopClick");
+    connectionStatus.textContent = "RightStopClick";
     if (typeof controlCharacteristic === 'undefined') {
-        console.log("Control Characteristic not defined.");
+        connectionStatus.textContent = "Control Characteristic not defined.";
         return;
     }
 
@@ -109,9 +110,9 @@ async function RightStopClick() {
 }
 
 async function LeftBackwardClick() {
-    console.log("LeftBackwardsClick");
+    connectionStatus.textContent = "LeftBackwardsClick";
     if (typeof controlCharacteristic === 'undefined') {
-        console.log("Control Characteristic not defined.");
+        connectionStatus.textContent = "Control Characteristic not defined.";
         return;
     }
 
@@ -125,9 +126,9 @@ async function LeftBackwardClick() {
 }
 
 async function RightBackwardClick() {
-    console.log("RightBackwardsClick");
+    connectionStatus.textContent = "RightBackwardsClick";
     if (typeof controlCharacteristic === 'undefined') {
-        console.log("Control Characteristic not defined.");
+        connectionStatus.textContent = "Control Characteristic not defined.";
         return;
     }
 

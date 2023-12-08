@@ -10,23 +10,27 @@
         <link rel="stylesheet" href="longevitysoftware.css">
     </head>
     <body>
-        <div class="row">
+        <div class="div-no-padding">
             <button type="button" id="connectButton" class="btn btn-primary">Connect</button>
         </div>
-
-        <div class="row">
-            <div class="col-sm-6"><button type="button" id="LeftForwardButton" class="btn btn-primary">Fwd</button></div>
-            <div class="col-sm-6"><button type="button" id="RightForwardButton" class="btn btn-primary">Fwd</button></div>
+        
+        <div class="div-no-padding">
+            <h5 id="connectionStatus">IDLE</h5>
         </div>
         
-        <div class="row">
-            <div class="col-sm-6"><button type="button" id="LeftStopButton" class="btn btn-primary">Stop</button></div>
-            <div class="col-sm-6"><button type="button" id="RightStopButton" class="btn btn-primary">Stop</button></div>
+        <div class="div-no-padding">
+            <button type="button" id="LeftForwardButton" class="btn btn-primary">Fwd</button>
+            <button type="button" id="RightForwardButton" class="btn btn-primary">Fwd</button>
         </div>
         
-        <div class="row">
-            <div class="col-sm-6"><button type="button" id="LeftBackwardButton" class="btn btn-primary">Reverse</button></div>
-            <div class="col-sm-6"><button type="button" id="RightBackwardButton" class="btn btn-primary">Reverse</button></div>
+        <div class="div-no-padding">
+            <button type="button" id="LeftStopButton" class="btn btn-primary">Stop</button>
+            <button type="button" id="RightStopButton" class="btn btn-primary">Stop</button>
+        </div>
+        
+        <div class="div-no-padding">
+            <button type="button" id="LeftBackwardButton" class="btn btn-primary">Reverse</button>
+            <button type="button" id="RightBackwardButton" class="btn btn-primary">Reverse</button>
         </div>
         <script src="WebBle.js"></script>
     </body>

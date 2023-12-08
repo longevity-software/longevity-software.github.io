@@ -36,6 +36,7 @@ async function BLEManager() {
 
     try {
         const connectedDevice = await device.gatt.connect();
+        connectionStatus.textContent = "CONNECTED to " + device.name;
     }
     catch(err) {
         connectionStatus.textContent = "CONNECTION FAILED - " + err.message;

@@ -8,6 +8,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="longevitysoftware.css">
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="js/markdown-renderer.js"></script>
+        <script src="js/router.js"></script>
     </head>
     <body>
         <!-- this is the common header-->
@@ -18,29 +21,45 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4"><h4 class="text-center"><a href="#" class="btn btn-success btn-block disabled" role="button">About</a></h4></div>
-            <div class="col-sm-4"><h4 class="text-center"><a href="index.htm" class="btn btn-success btn-block active" role="button">Blogs</a></h4></div>
-            <div class="col-sm-4"><h4 class="text-center"><a href="#" class="btn btn-success btn-block disabled" role="button">Contact</a></h4></div>
+            <div class="col-sm-4">
+                <h4 class="text-center">
+                    <a href="#" class="btn btn-success btn-block disabled" role="button">About</a>
+                </h4>
+            </div>
+            <div class="col-sm-4">
+                <h4 class="text-center">
+                    <a href="index.html" class="btn btn-success btn-block" role="button">Blogs</a>
+                </h4>
+            </div>
+            <div class="col-sm-4">
+                <h4 class="text-center">
+                    <a href="#" class="btn btn-success btn-block disabled" role="button">Contact</a>
+                </h4>
+            </div>
             <br>
         </div>
         <!-- this is the main content -->
         <div class="row">
             <div class="col-sm-12">
                 <div class="page-header heading">
-                    <h1>Blogs</h1>
+                    <h1 id="post-title">Blog Post</h1>
                 </div>
+                <div id="post-content" class="markdown-body"></div>
+                <br>
                 <p>
-                    This page has moved. If you are not redirected automatically,
-                    please <a href="index.html">click here for the latest blog index</a>.
+                    <a href="index.html" class="btn btn-default">← Back to blog index</a>
                 </p>
-                <script>
-                    window.location.replace('index.html');
-                </script>
             </div>
         </div>
         <!-- this is the common footer -->
         <div class="col-sm-12">
             <p class="text-center">© Longevity Software 2023</p>
         </div>
+        <script>
+            if (window.PostRouter && typeof window.PostRouter.init === 'function') {
+                window.PostRouter.init();
+            }
+        </script>
     </body>
 </html>
+

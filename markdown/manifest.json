@@ -1,0 +1,29 @@
+{
+  "categories": [
+    {
+      "id": "design_patterns",
+      "label": "Embedded Design Patterns",
+      "panelId": "design_patterns_panel",
+      "posts": [
+        {
+          "id": "null_object",
+          "title": "Null Object Pattern",
+          "hash": "#/Blogs/DesignPatterns/NullObject"
+        }
+      ]
+    },
+    {
+      "id": "projects",
+      "label": "Projects",
+      "panelId": "projects_panel",
+      "posts": [
+        {
+          "id": "adc_from_a_to_z",
+          "title": "Building an ADC from A to Z",
+          "hash": "#/Blogs/Projects/BuildingAnAdcFromAToZ"
+        }
+      ]
+    }
+  ]
+}
+

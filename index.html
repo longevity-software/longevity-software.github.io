@@ -8,6 +8,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="longevitysoftware.css">
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="js/index-generator.js"></script>
     </head>
     <body>
         <!-- this is the common header-->
@@ -18,9 +20,21 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4"><h4 class="text-center"><a href="#" class="btn btn-success btn-block disabled" role="button">About</a></h4></div>
-            <div class="col-sm-4"><h4 class="text-center"><a href="index.htm" class="btn btn-success btn-block active" role="button">Blogs</a></h4></div>
-            <div class="col-sm-4"><h4 class="text-center"><a href="#" class="btn btn-success btn-block disabled" role="button">Contact</a></h4></div>
+            <div class="col-sm-4">
+                <h4 class="text-center">
+                    <a href="#" class="btn btn-success btn-block disabled" role="button">About</a>
+                </h4>
+            </div>
+            <div class="col-sm-4">
+                <h4 class="text-center">
+                    <a href="index.html" class="btn btn-success btn-block active" role="button">Blogs</a>
+                </h4>
+            </div>
+            <div class="col-sm-4">
+                <h4 class="text-center">
+                    <a href="#" class="btn btn-success btn-block disabled" role="button">Contact</a>
+                </h4>
+            </div>
             <br>
         </div>
         <!-- this is the main content -->
@@ -29,18 +43,21 @@
                 <div class="page-header heading">
                     <h1>Blogs</h1>
                 </div>
-                <p>
-                    This page has moved. If you are not redirected automatically,
-                    please <a href="index.html">click here for the latest blog index</a>.
-                </p>
-                <script>
-                    window.location.replace('index.html');
-                </script>
+                <p>Select a topic below to see my posts on that topic.</p>
+                <br>
+                <!-- The list of blogs available -->
+                <div class="panel-group" id="blog-panels"></div>
             </div>
         </div>
         <!-- this is the common footer -->
         <div class="col-sm-12">
             <p class="text-center">© Longevity Software 2023</p>
         </div>
+        <script>
+            if (window.IndexGenerator && typeof window.IndexGenerator.init === 'function') {
+                window.IndexGenerator.init();
+            }
+        </script>
     </body>
 </html>
+

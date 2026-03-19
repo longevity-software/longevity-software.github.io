@@ -106,3 +106,34 @@ body {
     text-decoration: none;
     background-color: #f5f5f5;
 }
+
+/* Blog image helpers
+   Usage (in markdown):
+   - ![alt](path "full")
+   - ![alt](path "half")
+   - ![alt](path "half-left")
+   - ![alt](path "50% right")
+*/
+.markdown-body img.blog-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.markdown-body img.blog-img.img-block {
+    display: block;
+}
+
+.markdown-body img.blog-img.align-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.markdown-body img.blog-img.align-left {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.markdown-body img.blog-img.align-right {
+    margin-left: auto;
+    margin-right: 0;
+}
